@@ -2,6 +2,7 @@ services:
   nixos-homepage:
     build:
       context: .
+    privileged: true
     environment:
       HOST: "0.0.0.0"
     ports:
@@ -12,4 +13,6 @@ services:
       - nix
       - develop
       - --command
-      - serve
+      - npm
+      - run
+      - dev
