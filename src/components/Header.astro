@@ -14,8 +14,10 @@ const navbarItemStyle = `text-center text-nix-blue-dark md:text-black md:hover:b
 const navbarItemInactiveStyle = `border-b-nix-blue-extralight md:border-b-transparent bg-nix-blue-extralight md:bg-transparent`;
 const navbarItemActiveStyle = `border-b-nix-blue-light bg-nix-blue-light text-white md:text-black md:bg-transparent font-bold`;
 
-let nixosFlake = process.env.SEASONAL_THEME === "pride" ? "/src/assets/image/nix-snowflake-rainbow.svg" : "/src/assets/image/nixos-logo-notext.svg";
-
+let nixosFlake =
+  process.env.SEASONAL_THEME === 'pride'
+    ? '/src/assets/image/nix-snowflake-rainbow.svg'
+    : '/src/assets/image/nixos-logo-notext.svg';
 ---
 
 <header
@@ -30,11 +32,7 @@ let nixosFlake = process.env.SEASONAL_THEME === "pride" ? "/src/assets/image/nix
         href="/"
         class="flex items-center justify-between gap-2 select-none md:justify-start"
       >
-        <InlineSVG
-          class="h-12 w-auto"
-          src={nixosFlake}
-          alt="Nixos Logo"
-        />
+        <InlineSVG class="h-12 w-auto" src={nixosFlake} alt="Nixos Logo" />
         <InlineSVG
           class="block h-12 w-auto md:hidden xl:block"
           src="/src/assets/image/nixos-logo-text.svg"
