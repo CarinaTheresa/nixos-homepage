@@ -242,6 +242,7 @@ rec {
               export NIXOS_STABLE_SERIES="${NIXOS_STABLE_SERIES}"
               export NIXOS_UNSTABLE_SERIES="${NIXOS_UNSTABLE_SERIES}"
               export NIXOS_AMIS="${NIXOS_AMIS}"
+              export SEASONAL_THEME="pride"
 
               if [ ! -d node_modules ]; then
                 ${nodejs_current}/bin/npm install

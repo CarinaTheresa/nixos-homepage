@@ -13,6 +13,9 @@ const currentTopRoute = `/${Astro.url.pathname.split('/')[1]}`;
 const navbarItemStyle = `text-center text-nix-blue-dark md:text-black md:hover:border-b-nix-blue-light border-b-4`;
 const navbarItemInactiveStyle = `border-b-nix-blue-extralight md:border-b-transparent bg-nix-blue-extralight md:bg-transparent`;
 const navbarItemActiveStyle = `border-b-nix-blue-light bg-nix-blue-light text-white md:text-black md:bg-transparent font-bold`;
+
+let nixosFlake = process.env.SEASONAL_THEME === "pride" ? "/src/assets/image/nix-snowflake-rainbow.svg" : "/src/assets/image/nixos-logo-notext.svg";
+
 ---
 
 <header
@@ -29,7 +32,7 @@ const navbarItemActiveStyle = `border-b-nix-blue-light bg-nix-blue-light text-wh
       >
         <InlineSVG
           class="h-12 w-auto"
-          src="/src/assets/image/nixos-logo-notext.svg"
+          src={nixosFlake}
           alt="Nixos Logo"
         />
         <InlineSVG

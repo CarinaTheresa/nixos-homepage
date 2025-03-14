@@ -10,6 +10,8 @@ import syntaxTheme from "./src/lib/shiki/theme.json";
 
 import favicons from "astro-favicons";
 
+const faviconPath = process.env.SEASONAL_THEME === "pride" ? "src/assets/image/nix-snowflake-rainbow.svg" : "public/favicon.svg";
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
@@ -20,6 +22,11 @@ export default defineConfig({
       simpleIcons: ["*"],
     },
   }), favicons({
+    input: {
+      favicons: [
+        faviconPath
+      ]
+    },
     name: "Nix & NixOS",
     short_name: "Nix & NixOS",
     manifest: {
